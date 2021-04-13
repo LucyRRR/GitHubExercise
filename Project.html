@@ -11,22 +11,22 @@
             integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
             crossorigin="anonymous"
         />
+        <script
+            src="https://kit.fontawesome.com/1921ec3f9c.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="src/styles.css" />
-        <script
-            src="https://kit.fontawesome.com/1921ec3f9c.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="page">
-                <form id="write-city">
+                <form class="write-city" id="write-city">
                     <input
                         id="cityInput"
                         type="text"
@@ -45,54 +45,55 @@
                         type="submit"
                         class="current"
                         value="Current"
-                        id="current"
+                        id="current-button"
                     />
                 </form>
                 <div class="container">
                     <div class="row">
-                        <div class="City">
-                            <h2 id="displayCity"></h2>
-                            <br>
-                        </div>
+                        <div class="City"></div>
+                        <br />
                         <div class="row">
                             <div class="card-1">
                                 <div class="card-body">
                                     <h3 class="card-title" id="city"></h3>
-                                    <h4 id="currentTime"></h4>
-                                    <div id="temperatures">
-                                        <strong>
-                                            <i class="fas fa-sun"></i>
-                                        </strong>
-                                        <p id="degrees"></p>
-                                        <div id="celsia">°C </div>
-                                        
-                                        
-                                    </div>
-                                    
-                                    </a>
+                                    <h2
+                                        class="displayCity"
+                                        id="displayCity"
+                                    ></h2>
+                                    <h4 id="date"></h4>
 
+                                    <h6 id="description"></h6>
                                     <div>
-                                        <br />
-                                        <p class="saying">
-                                            A bad weather in Prague is still
-                                            better than a good day in enywhere
-                                            else.
-                                        </p>
+                                        <span
+                                            class="temperatures"
+                                            id="temperatures"
+                                        ></span
+                                        ><span class="units">°C</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card-2">
                                 <div class="card-body">
-                                    <ul
-                                        id="weatherList"
-                                        class="card-detail"
-                                        id="detailedWeather"
-                                    >
-                                        
-                                        <li>Wind: <span id="wind"> km/hour</span></li>
-                                        <li>Probability of rain: <span id="humidity"> %</span></li>
+                                    <ul id="weatherList" class="card-detail">
+                                        <li>
+                                            Humidity:
+                                            <span id="humidity"></span> %
+                                        </li>
+                                        <li>
+                                            Wind:
+                                            <span id="wind"></span> km/hour
+                                        </li>
                                     </ul>
+                                    <br />
+                                    <p class="saying">
+                                        A bad weather in
+                                        <span class="displayCity"
+                                            >Bratislava</span
+                                        >
+                                        is still better than a good day in
+                                        enywhere else.
+                                    </p>
                                 </div>
                             </div>
                             <hr />
@@ -135,6 +136,6 @@
                 </div>
             </div>
         </div>
-      <script src="src/index.js"></script>
+        <script src="src/index.js"></script>
     </body>
 </html>

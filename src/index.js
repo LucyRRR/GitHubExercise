@@ -1,140 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Wireframe</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-            crossorigin="anonymous"
-        />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="src/styles.css" />
-        <script
-            src="https://kit.fontawesome.com/1921ec3f9c.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="page">
-                <form id="write-city">
-                    <input
-                        id="cityInput"
-                        type="text"
-                        placeholder="Enter a city"
-                        size="30"
-                        autocomplete="off"
-                        autofocus="on"
-                    />
-                    <input
-                        type="submit"
-                        class="search"
-                        value="Search"
-                        id="search"
-                    />
-                    <input
-                        type="submit"
-                        class="current"
-                        value="Current"
-                        id="current"
-                    />
-                </form>
-                <div class="container">
-                    <div class="row">
-                        <div class="City">
-                            <h2 id="displayCity"></h2>
-                            <br>
-                        </div>
-                        <div class="row">
-                            <div class="card-1">
-                                <div class="card-body">
-                                    <h3 class="card-title" id="city"></h3>
-                                    <h4 id="currentTime"></h4>
-                                    <div id="temperatures">
-                                        <strong>
-                                            <i class="fas fa-sun"></i>
-                                        </strong>
-                                        <p id="degrees"></p>
-                                        <div id="celsia">°C </div>
-                                        
-                                        
-                                    </div>
-                                    
-                                    </a>
+//Challenge 1
 
-                                    <div>
-                                        <br />
-                                        <p class="saying">
-                                            A bad weather in Prague is still
-                                            better than a good day in enywhere
-                                            else.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="card-2">
-                                <div class="card-body">
-                                    <ul
-                                        id="weatherList"
-                                        class="card-detail"
-                                        id="detailedWeather"
-                                    >
-                                        
-                                        <li>Wind: <span id="wind"> km/hour</span></li>
-                                        <li>Probability of rain: <span id="humidity"> %</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
-                        <div class="card-3">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <h4>Tomorrow</h4>
-                                    <br /><i class="fas fa-cloud"></i>
-                                    <br />
-                                    <h5 id="nextTemperatures">16 °C</h5>
-                                </div>
-                                <div class="col-sm">
-                                    <h4>Monday</h4>
-                                    <br /><i class="fas fa-cloud"></i>
-                                    <br />
-                                    <h5 id="nextTemperatures">18 °C</h5>
-                                </div>
-                                <div class="col-sm">
-                                    <h4>Tuesday</h4>
-                                    <br /><i class="fas fa-cloud-sun"></i>
-                                    <br />
-                                    <h5 id="nextTemperatures">21 °C</h5>
-                                </div>
-                                <div class="col-sm">
-                                    <h4>Wednesday</h4>
-                                    <br /><i class="fas fa-cloud-sun"></i>
-                                    <br />
-                                    <h5 id="nextTemperatures">21 °C</h5>
-                                </div>
-                                <div class="col-sm">
-                                    <h4>Thursday</h4>
-                                    <br /><i class="fas fa-cloud-sun"></i>
-                                    <br />
-                                    <h5 id="nextTemperatures">21 °C</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      <script src="src/index.js"></script>
-    </body>
-</html>
+function formatDate(date) {
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let dayIndex = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[dayIndex];
+
+  return `${day} ${hours}:${minutes}`;
+}
+
+//     
+
+//     // function citySearch (event){ 
+//     // event.preventDefault();
+//     // let input = document.querySelector("#cityInput").value; {
+
+    
+
+// //     document.querySelector("#city").innerHTML = input;
+// // }
+
+// // function citySearch (event){ 
+// //     event.preventDefault();
+    
+// //     let input = document.querySelector("#cityInput").value;
+// //     document.querySelector("#city").innerHTML = input;
+// // }
+// function changeCelsia(){
+//     let numberCelsia = document.querySelector("#degrees");
+//     numberCelsia.innerHTML = "16";
+// }
+
+    
+    
+//     let degreesCelsia = document.querySelector("#celsia");
+//     degreesCelsia.addEventListener("click", changeCelsia);
+
+
+
+// ///API
+// //Challenge 1
+
+//     let searchButton = document.querySelector("#search");
+//     searchButton.addEventListener("click", citySearch);
+
+// function showCity(response){
+//     let weatherCity = document.querySelector("#city");
+//     let input = document.querySelector("#cityInput").value;
+//     weatherCity.innerHTML = `${response.data.name}`;
+    
+//     let cityTemperature = document.querySelector("#degrees");
+//     let temperature = Math.round(response.data.main.temp);
+//     cityTemperature.innerHTML = `${temperature}`;
+
+//     //DOROB SAYING A LISTY//
+//     // let citySaying = document.querySelector("#saying");
+//     // citySaying.innerHTML = `A bad weather in ${weatherCity} is still better than a good day in enywhere else.`;
+                                            
+//     // let cityHumidity = document.querySelector("#humidity");
+//     // let humidity = (response.data.main.humidity);
+//     // cityTemperature.innerHTML = `${humidity}`;
+
+
+// }
+
+// function citySearch (event) {
+//     event.preventDefault();
+//     let apiKey = `9561e0b8516730d7561152d7deb2d27b`;
+//     let units = `metric`;
+//     let input = ("#cityInput");
+//     input = document.querySelector("#cityInput").value;
+//     let apiUrl = (`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=${units}&appid=${apiKey}`);
+//     console.log(apiUrl);
+//     axios.get(apiUrl).then(showCity);
+// }
+
+
+//     // Challenge 2
+
+
+//     function showWeather(response) {
+//         let currentTemperature = document.querySelector("#degrees");
+//         let temperature = Math.round(response.data.main.temp);
+//         currentTemperature.innerHTML = `${temperature}`;
+//     }
+
+//     function currentPosition(position){
+//         let apiKey = "9561e0b8516730d7561152d7deb2d27b";
+//         let units = `metric`;
+//         let lat = position.coords.latitude;
+//         let lon = position.coords.longitude;
+//         let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+//         console.log(url);
+//         axios.get(url).then(showWeather);
+//     }
+
+//         let currentButton = document.querySelector("#current");
+//         currentButton.addEventListener("submit", (navigator.geolocation.getCurrentPosition(currentPosition)));
+
+    
+
+    
+////
+
+
+function displayWeatherCondition(response) {
+  document.querySelectorAll(".displayCity").forEach(function(singleElement){
+    singleElement.innerHTML = response.data.name;
+  });
+  document.querySelector("#temperatures").innerHTML = Math.round(
+    response.data.main.temp
+  );
+
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+}
+
+function searchCity(displayCity) {
+    let units = `metric`;
+    let apiKey = "9561e0b8516730d7561152d7deb2d27b";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${displayCity}&units=${units}&appid=${apiKey}`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+    console.log(apiUrl);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#cityInput").value;
+  searchCity(city);
+}
+
+function searchLocation(position) {
+  let apiKey = "9561e0b8516730d7561152d7deb2d27b";
+        let units = `metric`;
+        let lat = position.coords.latitude;
+        let lon = position.coords.longitude;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
+
+let searchForm = document.querySelector("#write-city");
+searchForm.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#current-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+searchCity("Bratislava");
+
