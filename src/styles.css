@@ -51,7 +51,7 @@ input {
     margin: 0px auto 1em auto;
 }
 .card-1,
-.card-3,
+#nextDays,
 .card-2 {
     display: flex;
     justify-content: center;
