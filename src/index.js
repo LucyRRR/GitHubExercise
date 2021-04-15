@@ -42,6 +42,7 @@ function displayWeatherCondition(response) {
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute ("alt", "#description");
+    celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(displayCity) {
@@ -84,10 +85,17 @@ let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Bratislava");
+let celsiusTemperature = null;
+
+function celsiaConvesion (event) {
+  event.preventDefault();
+   let temperatureElement = document.querySelector("#temperature");
+   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 function fahrenheitConversion (event) {
     event.preventDefault();
-    let fahrenheitTemperature = (15*1.8) + 32;
+    let fahrenheitTemperature = (celsiusTemperature * 1.8) + 32;
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
     
@@ -95,7 +103,10 @@ function fahrenheitConversion (event) {
 
 
 let fahrenheitElement = document.querySelector("#fahrenheit-link");
-fahrenheitElement.addEventListener("click", fahrenheitConversion)
+fahrenheitElement.addEventListener("click", fahrenheitConversion);
+
+let celsiusElement = document.querySelector("#celsius-link");
+celsiusElement.addEventListener("click", celsiaConvesion);
 
 
 

@@ -85,18 +85,16 @@ input {
     margin-top: 20px;
 }
 
-#celsia {
-    display: inline-block;
-}
 .current {
     background-color: #a9d3da;
     margin-left: 20px;
 }
-.units,
+#celsius-link
 #fahrenheit-link {
     position: relative;
     top: -34px;
 }
-#fahrenheit-link {
+#fahrenheit-link,
+#celsius-link {
     text-decoration: none;
 }
