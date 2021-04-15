@@ -89,12 +89,16 @@ let celsiusTemperature = null;
 
 function celsiaConvesion (event) {
   event.preventDefault();
+  celsiusElement.classList.add("active");
+    fahrenheitElement.classList.remove("active");
    let temperatureElement = document.querySelector("#temperature");
    temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 function fahrenheitConversion (event) {
     event.preventDefault();
+    celsiusElement.classList.remove("active");
+    fahrenheitElement.classList.add("active");
     let fahrenheitTemperature = (celsiusTemperature * 1.8) + 32;
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
