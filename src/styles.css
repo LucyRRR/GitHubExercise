@@ -38,7 +38,6 @@ input {
     font-size: 20px;
 }
 
-
 .card-3 i {
     font-size: 80px;
 }
@@ -89,11 +88,14 @@ input {
     display: inline-block;
 }
 .current {
-    background-color:  #a9d3da;
+    background-color: #a9d3da;
     margin-left: 20px;
 }
-.units {
+.units,
+#fahrenheit-link {
     position: relative;
     top: -34px;
 }
-#
+#fahrenheit-link {
+    text-decoration: none;
+}
