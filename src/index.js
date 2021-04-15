@@ -29,7 +29,7 @@ function displayWeatherCondition(response) {
   document.querySelectorAll(".displayCity").forEach(function(singleElement){
     singleElement.innerHTML = response.data.name;
   });
-  document.querySelector("#temperatures").innerHTML = Math.round(
+  document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
 
@@ -96,4 +96,6 @@ function fahrenheitConversion (event) {
 
 let fahrenheitElement = document.querySelector("#fahrenheit-link");
 fahrenheitElement.addEventListener("click", fahrenheitConversion)
+
+
 
