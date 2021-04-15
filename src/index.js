@@ -39,6 +39,9 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute ("alt", "#description");
 }
 
 function searchCity(displayCity) {
@@ -46,7 +49,6 @@ function searchCity(displayCity) {
     let apiKey = "9561e0b8516730d7561152d7deb2d27b";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${displayCity}&units=${units}&appid=${apiKey}`;
     axios.get(apiUrl).then(displayWeatherCondition);
-    console.log(apiUrl);
 }
 
 function handleSubmit(event) {
