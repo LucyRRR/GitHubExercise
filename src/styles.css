@@ -89,12 +89,15 @@ input {
     background-color: #a9d3da;
     margin-left: 20px;
 }
-#celsius-link
-#fahrenheit-link {
+#celsius-link #fahrenheit-link {
     position: relative;
     top: -34px;
 }
 #fahrenheit-link,
 #celsius-link {
     text-decoration: none;
+}
+.temperature-description .active {
+    color: black;
+    cursor: default;
 }
