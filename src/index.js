@@ -85,3 +85,15 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Bratislava");
 
+function fahrenheitConversion (event) {
+    event.preventDefault();
+    let fahrenheitTemperature = (15*1.8) + 32;
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+    
+}
+
+
+let fahrenheitElement = document.querySelector("#fahrenheit-link");
+fahrenheitElement.addEventListener("click", fahrenheitConversion)
+
