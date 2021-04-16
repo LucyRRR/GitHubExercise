@@ -101,3 +101,9 @@ input {
     color: black;
     cursor: default;
 }
+#nextDays {
+    margin-top: -10px;
+}
+#weather-forecast-day {
+    font-size: 22px;
+}
