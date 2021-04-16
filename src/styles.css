@@ -106,4 +106,9 @@ input {
 }
 #weather-forecast-day {
     font-size: 22px;
+    opacity: 0.8;
+}
+#weather-forecast-max,
+#weather-forecast-min {
+    font-size: 18px;
 }
