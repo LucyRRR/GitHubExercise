@@ -58,7 +58,8 @@ input {
 }
 .card-1,
 .card-2 {
-    background-color: #c3d8db;
+    background-color: #dbe9eb;
+    border-radius: 5px;
 }
 
 .card-3 {
@@ -70,6 +71,7 @@ input {
     line-height: 30px;
     text-align-last: center;
 }
+
 #temperature {
     font-size: 60px;
 }
@@ -78,7 +80,7 @@ input {
     transition: 200ms ease-in-out;
 }
 .search:hover {
-    background-color: rgb(178, 202, 248);
+    background-color: #dbe9eb;
 }
 
 .page {
