@@ -103,6 +103,8 @@ input {
 }
 #nextDays {
     margin-top: -10px;
+    text-align: center;
+    margin-left: 100px;
 }
 #weather-forecast-day {
     font-size: 22px;
