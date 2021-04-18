@@ -88,6 +88,7 @@ input {
     border-radius: 10px;
     border-style: solid;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .current {
@@ -110,6 +111,7 @@ input {
     margin-top: -10px;
     text-align: center;
     margin-left: 100px;
+    padding-bottom: 10px;
 }
 #weather-forecast-day {
     font-size: 22px;
