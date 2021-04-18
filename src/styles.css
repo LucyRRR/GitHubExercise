@@ -59,7 +59,7 @@ input {
 .card-1,
 .card-2 {
     background-color: #dbe9eb;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .card-3 {
@@ -70,12 +70,26 @@ input {
 .saying {
     line-height: 30px;
     text-align-last: center;
+    padding: 10px 10px;
 }
 
 #temperature {
     font-size: 60px;
+    position: relative;
+    top: 30px;
 }
-
+#celsia {
+    position: relative;
+}
+.temperature-description {
+    display: inline;
+}
+.temperature-description img {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    top: 15px;
+}
 .search {
     transition: 200ms ease-in-out;
 }
@@ -89,22 +103,17 @@ input {
     background-size: cover;
     border-radius: 10px;
     border-style: solid;
+    border-color: rgb(192, 188, 188);
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 1000px;
 }
 
 .current {
     background-color: #a9d3da;
     margin-left: 20px;
 }
-#celsius-link #fahrenheit-link {
-    position: relative;
-    top: -34px;
-}
-#fahrenheit-link,
-#celsius-link {
-    text-decoration: none;
-}
+
 .temperature-description .active {
     color: black;
     cursor: default;
