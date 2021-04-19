@@ -12,14 +12,7 @@
 #currentTime {
     color: #536162;
 }
-#currentTime,
-#nextTemperatures {
-    font-weight: bold;
-}
-#nextTemperatures {
-    font-size: 24px;
-    color: rgb(10, 10, 10);
-}
+
 #write-city {
     display: flex;
     justify-content: center;
@@ -122,13 +115,10 @@ input {
     padding-bottom: 10px;
 }
 #weather-forecast-day {
-    font-size: 22px;
+    font-size: 32px;
     opacity: 0.8;
 }
-#weather-forecast-max,
-#weather-forecast-min {
-    font-size: 18px;
-}
+
 #helpful-info {
     position: relative;
     top: 50px;
