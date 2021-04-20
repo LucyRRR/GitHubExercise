@@ -78,8 +78,8 @@ input {
     padding-bottom: 10px;
 }
 .temperature-description img {
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
     position: relative;
     top: 15px;
 }
@@ -98,9 +98,9 @@ input {
     border-radius: 10px;
     border-style: solid;
     border-color: rgb(192, 188, 188);
-    margin-top: 20px;
-    margin-bottom: 10px;
     width: 1000px;
+    display: block;
+    margin: 20px auto;
 }
 
 .current {
@@ -113,10 +113,15 @@ input {
     text-align: center;
     margin-left: 100px;
     padding-bottom: 10px;
+    min-height: 150px;
 }
-#weather-forecast-day {
-    font-size: 32px;
+.weather-forecast-day {
+    font-size: 24px;
     opacity: 0.8;
+}
+.nextTemperatures {
+    font-size: 26px;
+    font-weight: bold;
 }
 
 #helpful-info {
@@ -130,5 +135,5 @@ input {
     color: black;
 }
 #code-link {
-    margin-left: 350px;
+    text-align: center;
 }
